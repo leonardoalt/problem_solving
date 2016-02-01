@@ -1,0 +1,50 @@
+#include <iostream>
+#include <cstdio>
+#include <sstream>
+#include <cctype>
+#include <climits>
+#include <cstring>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+#define fori(n) for(int i = 0; i < n; ++i)
+#define forj(n) for(int j = 0; j < n; ++j)
+
+int p10[] = {1, 10, 100, 1000};
+
+int
+main()
+{
+	string s, r;
+	char c, lc;
+	int n, d, counter;
+
+	scanf("%d", &t);
+	while(t--)
+	{
+		cin >> s;
+		n = 0;
+		fori(int(s.size()))
+		{
+			c = s[i];
+			if(c >= 'A' && c <= 'Z')
+			{
+				forj(n) r += lc;
+				lc = c;
+				n = 0;
+				counter = 0;
+				continue;
+			}
+			d = int(c) - '0';
+			n += d * p10[counter++];
+		}
+		fori(n) r += lc;
+		fori(int(r.size()))
+		{
+			forj(
+	}
+	return 0;
+}
+
